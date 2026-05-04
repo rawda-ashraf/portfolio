@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (e) {}
   };
 
-  let savedTheme = "light";
+  let savedTheme = "dark";
   try {
-    savedTheme = localStorage.getItem("mg-theme") || "light";
+    savedTheme = localStorage.getItem("mg-theme") || "dark";
   } catch (e) {}
   setTheme(savedTheme);
 

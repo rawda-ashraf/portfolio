@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing | Mariam Gamal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── Pricing page specific styles ── */
+    .pricing-page {
+      min-height: 100svh;
+      padding: 6rem 0 5rem;
+    }
+
+    .pricing-header-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.25rem 2rem;
+      background: rgba(250,248,244,.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background .3s;
+    }
+    body.dark-theme .pricing-header-bar { background: rgba(14,12,9,.88); }
+
+    .pricing-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color .25s;
+      font-family: var(--ff-mono);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .back-link:hover { color: var(--gold); }
+
+    .pricing-hero {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .pricing-hero .section-label { display: block; margin-bottom: .75rem; }
+
+    .pricing-hero h1 {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.05;
+    }
+    .pricing-hero h1 em { font-style: italic; color: var(--gold); }
+    .pricing-hero p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .pricing-note {
+      max-width: 640px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.25rem;
+      background: var(--gold-pale);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      text-align: left;
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .pricing-note i { color: var(--gold); flex-shrink: 0; margin-top: .1rem; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .price-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow .35s, border-color .35s, transform .35s var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-gold);
+      transform: translateY(-6px);
+    }
+    .price-card.featured {
+      border-color: var(--gold);
+      background: var(--noir);
+      color: var(--ivory-2);
+    }
+    body.dark-theme .price-card.featured {
+      background: var(--ivory-3);
+      color: var(--text);
+    }
+    .price-card.featured::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(201,151,58,.15), transparent 60%);
+      pointer-events: none;
+    }
+
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      font-family: var(--ff-mono);
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .25rem .75rem;
+      border-radius: 2px;
+      color: var(--text-muted);
+      background: var(--ivory);
+      border: 1px solid var(--border);
+    }
+    body.dark-theme .price-badge { background: var(--ivory-2); }
+    .price-badge.highlight {
+      background: var(--gold-pale);
+      border-color: var(--border-gold);
+      color: var(--gold);
+    }
+
+    .price-icon {
+      width: 48px; height: 48px;
+      background: var(--gold-pale);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+    .price-card.featured .price-icon {
+      background: rgba(201,151,58,.2);
+    }
+
+    .price-card h3 {
+      font-size: 1.2rem;
+      font-family: var(--ff-serif);
+      font-weight: 700;
+    }
+    .price-card.featured h3 { color: var(--ivory); }
+    body.dark-theme .price-card.featured h3 { color: var(--text); }
+
+    .price-amount {
+      font-family: var(--ff-serif);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: .25rem;
+    }
+    .price-amount span {
+      font-size: .9rem;
+      font-family: var(--ff-sans);
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    .price-card.featured .price-amount { color: var(--ivory); }
+    body.dark-theme .price-card.featured .price-amount { color: var(--text); }
+
+    .price-desc {
+      font-size: .85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .price-card.featured .price-desc { color: rgba(250,248,244,.65); }
+    body.dark-theme .price-card.featured .price-desc { color: var(--text-muted); }
+
+    .price-divider {
+      height: 1px;
+      background: var(--border);
+      margin: .5rem 0;
+    }
+    .price-card.featured .price-divider { background: rgba(255,255,255,.1); }
+    body.dark-theme .price-card.featured .price-divider { background: var(--border); }
+
+    .price-features {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      flex: 1;
+    }
+    .price-features li {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+    .price-card.featured .price-features li { color: rgba(250,248,244,.75); }
+    body.dark-theme .price-card.featured .price-features li { color: var(--text-muted); }
+
+    .price-features li::before {
+      content: '✓';
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      background: var(--gold-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .price-features li.disabled {
+      opacity: .35;
+      text-decoration: line-through;
+    }
+    .price-features li.disabled::before {
+      content: '×';
+      color: var(--text-muted);
+      background: none;
+    }
+
+    .price-cta {
+      display: block;
+      text-align: center;
+      padding: .85rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: .88rem;
+      border: 2px solid var(--border);
+      color: var(--text);
+      transition: border-color .25s, background .25s, color .25s, transform .25s var(--ease);
+    }
+    .price-cta:hover {
+      border-color: var(--gold);
+      background: var(--gold-pale);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .price-cta.primary-cta {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #fff;
+    }
+    .price-cta.primary-cta:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      color: #fff;
+    }
+    .price-card.featured .price-cta {
+      border-color: rgba(255,255,255,.2);
+      color: var(--ivory);
+    }
+    .price-card.featured .price-cta:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .pricing-bottom {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .pricing-bottom h2 {
+      font-family: var(--ff-serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: .75rem;
+    }
+    .pricing-bottom h2 em { font-style: italic; color: var(--gold); }
+
+    .pricing-bottom p { color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.65; }
+
+    .pricing-bottom-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1100px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<header class="pricing-header-bar">
+  <div class="pricing-header-inner">
+    <a href="index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <div style="display:flex;align-items:center;gap:.6rem">
+      <button class="icon-btn lang-toggle" aria-label="Toggle Language">AR</button>
+      <button class="icon-btn theme-toggle" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun light-icon"></i>
+        <i class="fa-solid fa-moon dark-icon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="pricing-page">
+  <div class="section-container">
+
+    <div class="pricing-hero reveal-up">
+      <span class="section-label">Transparent Pricing</span>
+      <h1>Choose Your <em>Plan</em></h1>
+      <p>No hidden fees. Every plan is scoped to deliver real value — from a simple landing page to a full front-end experience.</p>
+      <div class="pricing-note">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>All plans include source code delivery, clean architecture, and a post-launch review session. Prices are estimates — final cost depends on project scope.</div>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="price-card reveal-up" style="--d:.05s">
+        <span class="price-badge">Starter</span>
+        <div class="price-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Basic</h3>
+        <div class="price-amount">$5–20 <span>/ project</span></div>
+        <p class="price-desc">Perfect for small landing pages and simple static websites.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li>Up to 3–6 Pages</li>
+          <li>Responsive Design</li>
+          <li>Contact Form</li>
+          <li class="disabled">Database Integration</li>
+          <li class="disabled">Admin Dashboard</li>
+          <li class="disabled">API Development</li>
+        </ul>
+        <a href="index.html#contact" class="price-cta">Get Started</a>
+      </div>
+
+      <div class="price-card featured reveal-up" style="--d:.1s">
+        <span class="price-badge highlight">⭐ Popular</span>
+        <div class="price-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h3>Balance</h3>
+        <div class="price-amount">$40–70 <span>/ project</span></div>
+        <p class="price-desc">Ideal for business websites with database and user management.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li>Up to 10 Pages</li>
+          <li>Everything in Basic</li>
+          <li>Database Integration</li>
+          <li>User Authentication</li>
+          <li>API Development</li>
+        </ul>
+        <a href="index.html#contact" class="price-cta primary-cta">Get Started</a>
+      </div>
+
+      <div class="price-card reveal-up" style="--d:.15s">
+        <span class="price-badge">Best Value</span>
+        <div class="price-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>PRO</h3>
+        <div class="price-amount">$80–100 <span>/ project</span></div>
+        <p class="price-desc">Full front-end solution with API integration, dashboard, and advanced UI logic.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li>Everything in Balance</li>
+          <li>Unlimited Pages</li>
+          <li>RESTful API Integration</li>
+          <li>Admin Dashboard UI</li>
+          <li>Performance Optimization</li>
+        </ul>
+        <a href="index.html#contact" class="price-cta">Get Started</a>
+      </div>
+
+      <div class="price-card reveal-up" style="--d:.2s">
+        <span class="price-badge">Enterprise</span>
+        <div class="price-icon"><i class="fa-solid fa-gears"></i></div>
+        <h3>Let's Talk</h3>
+        <div class="price-amount" style="font-size:1.8rem">Flexible</div>
+        <p class="price-desc">Tailored solutions for complex front-end projects with unique requirements.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li>Everything in PRO</li>
+          <li>Custom Architecture</li>
+          <li>Design System</li>
+          <li>Priority Support</li>
+          <li>Dedicated Maintenance</li>
+        </ul>
+        <a href="index.html#contact" class="price-cta">Contact Me</a>
+      </div>
+
+    </div>
+
+    <div class="pricing-bottom reveal-up" style="--d:.1s">
+      <h2>Not Sure Which <em>Plan</em> Fits?</h2>
+      <p>Reach out and we'll figure out the best scope and budget together. No commitment needed.</p>
+      <div class="pricing-bottom-actions">
+        <a href="index.html#contact" class="btn-primary">
+          <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+        <a href="index.html" class="btn-ghost">
+          <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+  // Reveal on load for pricing page
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('visible'));
+    }, 100);
+  });
+</script>
+</body>
+</html>

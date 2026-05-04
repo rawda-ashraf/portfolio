@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Rawda Gabal | Front-End Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link crossorigin="" rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a class="logo" href="#home">
+        <span class="logo-text"><i class="fa-solid fa-code"></i> <span>R<em>.</em>G</span></span>
+      </a>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#education">Education</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="fa-solid fa-sun light-icon"></i>
+          <i class="fa-solid fa-moon dark-icon"></i>
+        </button>
+        <!-- <button class="icon-btn lang-toggle" aria-label="Toggle Language">AR</button>
+        <a class="btn-header" href="#contact">Let's Talk</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button> -->
+    </div>
+  </header>
+
+  <main>
+
+
+    <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="hero-label reveal-up" style="--d:0s">Hello World!</span>
+          <h1 class="hero-heading reveal-up" style="--d:.1s">
+            <span class="line">Rawda Gabal</span>
+          </h1>
+          <p class="hero-sub reveal-up" style="--d:.25s">
+            I build secure, high-performance systems that solve real business problems
+          </p>
+          <div class="hero-ctas reveal-up" style="--d:.35s">
+            <a class="btn-primary" href="#projects">View My Work</a>
+            <a class="btn-ghost" target="_blank" href="Rawda Ashraf Gabal CV.pdf" download>Download CV <i
+                class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-right reveal-right" style="--d:.15s">
+          <div class="code-animation-wrapper">
+            <div class="code-window">
+              <div class="window-header">
+                <span class="window-dot red"></span>
+                <span class="window-dot yellow"></span>
+                <span class="window-dot green"></span>
+                <span class="window-title">developer.tsx</span>
+              </div>
+              <div class="code-content">
+                <div class="code-line">
+                  <span class="keyword">const</span>
+                  <span class="variable">developer</span>
+                  <span class="operator">=</span>
+                  <span class="punctuation">{</span>
+                </div>
+                <div class="code-line indent-1">
+                  <span class="property">name</span>
+                  <span class="operator">:</span>
+                  <span class="string">'Rawda Ashraf Gabal'</span>
+                  <span class="punctuation">,</span>
+                </div>
+                <div class="code-line indent-1">
+                  <span class="property">role</span>
+                  <span class="operator">:</span>
+                  <span class="string">'Front-End Developer'</span>
+                  <span class="punctuation">,</span>
+                </div>
+                <div class="code-line indent-1">
+                  <span class="property">skills</span>
+                  <span class="operator">:</span>
+                  <span class="punctuation">[</span>
+                </div>
+                <div class="code-line indent-2">
+                  <span class="string">'React.js'</span>
+                  <span class="punctuation">,</span>
+                </div>
+                <div class="code-line indent-2">
+                  <span class="string">'Next.js'</span>
+                  <span class="punctuation">,</span>
+                </div>
+                <div class="code-line indent-2">
+                  <span class="string">'TypeScript'</span>
+                  <span class="punctuation">,</span>
+                </div>
+                <div class="code-line indent-2">
+                  <span class="string">'Tailwind CSS'</span>
+                  <span class="punctuation">,</span>
+                </div>
+                <div class="code-line indent-2 cursor-line">
+                  <span class="string">'...</span>
+                  <span class="typing-cursor"></span>
+                  <span class="punctuation">]</span>
+                </div>
+                <div class="code-line indent-1">
+                  <span class="punctuation">}</span>
+                  <span class="punctuation">;</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Icons -->
+            <div class="floating-icon icon-1">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="floating-icon icon-2">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="floating-icon icon-3">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="floating-icon icon-4">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="floating-icon icon-5">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="section-container">
+        <div class="about-layout">
+          <div class="about-image-col">
+            <div class="about-img-frame reveal-left">
+              <img src="images/me.jpg" alt="Mariam Gamal" />
+              <div class="frame-accent"></div>
+            </div>
+            <div class="about-badges">
+              <div class="about-badge reveal-up" style="--d:.1s">
+                <i class="fa-solid fa-code"></i>
+                <div><span>+5 Projects</span></div>
+              </div>
+              <div class="about-badge reveal-up" style="--d:.2s">
+                <i class="fa-solid fa-infinity"></i>
+                <div><span>Learning</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="about-content-col">
+            <div class="section-label reveal-up">About Me</div>
+            <h2 class="section-heading reveal-up" style="--d:.05s">
+              Crafting<em> Digital </em>Experiences
+            </h2>
+            <p class="reveal-up" style="--d:.1s">
+              Hi, I'm Rawda Gabal, a Frontend Developer specializing in React.js. I started my journey with the
+              Digitalians scholarship, where I deeply studied the field and built many real-world style projects.
+            </p>
+            <p class="reveal-up" style="--d:.18s">
+              I have a strong project portfolio of <strong style="color: var(--gold)">5 complete projects.</strong>
+              These include a virtual e-commerce store with cart and filtering, a real-time weather app using external
+              APIs, an interactive admin dashboard, a
+              personal blog, and a task manager.
+            </p>
+            <p class="reveal-up" style="--d:.18s">
+              I improved my project load time by <strong style="color: var(--gold)">25% to 40%</strong> using
+              performance optimization techniques. I'm a fast
+              learner, committed to clean code, and able to turn ideas into working applications.
+            </p>
+            <p class="reveal-up" style="--d:.18s">
+              I'm open to collaboration, freelance opportunities, or mentorship — feel free to reach out.
+            </p>
+            <div class="about-skills-list reveal-up" style="--d:.26s">
+              <span><i class="fa-brands fa-react"></i> React.js</span>
+              <span> <i class="fa-brands fa-neos"></i> Next.js</span>
+              <span><i class="fa-brands fa-square-js"></i> JavaScript</span>
+              <span><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+              <span><i class="fa-brands fa-docker"></i> Docker</span>
+              <span><i class="fa-regular fa-lightbulb"></i> Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
+    <section class="section education" id="education">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">Background</div>
+          <h2 class="section-heading">Education &amp; <em>Certifications</em></h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-col">
+            <h3 class="edu-col-title reveal-up"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <div class="edu-card reveal-up" style="--d:.05s">
+              <div class="edu-card-top">
+                <a href="https://azu.edu.eg/" target="_blank" class="edu-logo-link">
+                  <img src="images/al-azhar-logo.jpg" alt="Al Azhar University" />
+                </a>
+                <div>
+                  <h4>Bachelor's Degree in Computer Engineering</h4>
+                  <h5>Faculty of Engineering Al-azhar University</h5>
+                </div>
+              </div>
+              <p class="edu-project">Graduation Project: E-proctor System . Grade : <strong> A</strong></p>
+              <div class="edu-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</span>
+                <span><i class="fa-regular fa-calendar-days"></i> 2020 — 2025</span>
+                <span><i class="fa-solid fa-award"></i> GPA: 3.6 / 4.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="edu-col">
+            <h3 class="edu-col-title reveal-up"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+            <div class="cert-list">
+              <div class="cert-card reveal-up" style="--d:.05s">
+                <div class="cert-card-head">
+                  <img src="images/depi_logo.jpg" alt="DEPI" />
+                  <div>
+                    <h4>React Frontend Web Developer</h4>
+                    <h5>Digital Egypt Pioneers Initiative - DEPI</h5>
+                  </div>
+                  <span class="cert-year">2025</span>
+                </div>
+                <p>Built responsive interfaces with React, TypeScript, components, routing, forms, and API integration.
+                </p>
+                <a class="cert-year" href="https://drive.google.com/file/d/1r_9eC2dQgJIK3Ye2Dyo0DVZ2DEIo_iVh/view"
+                  target="_blank">View Certification</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+
+    <section class="section skills" id="skills">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">Expertise</div>
+          <h2 class="section-heading">Skills</h2>
+          <p class="section-sub">A practical overview of my front-end toolkit, workflow, and strengths.</p>
+        </div>
+        <div class="skills-accordion">
+
+          <!-- Frontend -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <i class="fa-solid fa-code"></i>
+                <h3>Frontend Development</h3>
+              </div>
+              <div class="accordion-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <p>I build responsive, user-focused, and well-structured interfaces using clean code, scalable styling,
+                and maintainable front-end architecture.</p>
+              <div class="svc-tags">
+                <span><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span><i class="fa-brands fa-square-js"></i> JavaScript (ES6+)</span>
+                <span><i class="fa-solid fa-t"></i> TypeScript</span>
+                <span><i class="fa-brands fa-react"></i> React.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI & Styling -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <i class="fa-solid fa-brush"></i>
+                <h3>UI & Styling</h3>
+              </div>
+              <div class="accordion-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <p>Transforming design concepts into polished, accessible, and visually balanced interfaces across all
+                screen sizes.</p>
+
+              <div class="svc-tags">
+                <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                <span><i class="fa-solid fa-mobile-screen-button"></i> Responsive Design</span>
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> UI Implementation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- العنصر 3 - Tools -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Development Tools</h3>
+              </div>
+              <div class="accordion-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <p>Managing version control, testing APIs, and deploying full-stack applications with modern development
+                workflows.</p>
+              <div class="svc-tags">
+                <span><i class="fa-brands fa-git-alt"></i> Git</span>
+                <span><i class="fa-brands fa-github"></i> GitHub</span>
+                <span><i class="fa-brands fa-vimeo"></i> VS Code</span>
+                <span><i class="fa-brands fa-docker"></i> Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- العنصر 4 - Soft Skills -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <i class="fa-solid fa-people-line"></i>
+                <h3>Soft Skills</h3>
+              </div>
+              <div class="accordion-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <p>Strong ability to collaborate in teams, communicate technical ideas clearly, developed through
+                experience as a Team Leader in the Digilians scholarship.
+              </p>
+              <div class="svc-tags">
+                <span><i class="fa-solid fa-comments"></i> Communication</span>
+                <span><i class="fa-solid fa-users"></i> Teamwork</span>
+                <span><i class="fa-regular fa-calendar-days"></i> Time Management</span>
+                <span><i class="fa-brands fa-whmcs"></i> Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- العنصر 5 - Currently Learning -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h3>Currently Learning</h3>
+              </div>
+              <div class="accordion-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <p>Expanding front-end background with backend concepts, APIs, and full product flow.</p>
+              <div class="svc-tags">
+                <span> <i class="fa-solid fa-server"></i> Backend Fundamentals</span>
+                <span><i class="fa-solid fa-plug-circle-check"></i> Advanced API Integration</span>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </section>
+
+    <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
+
+    <section class="section experience" id="experience">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">Career</div>
+          <h2 class="section-heading">Work <em>Experience</em></h2>
+        </div>
+        <div class="exp-timeline">
+          <div class="exp-card featured reveal-up">
+            <div class="exp-card-side">
+              <img class="exp-company-abbr" src="images/digi.png" />
+              <div class="exp-vline"></div>
+            </div>
+            <div class="exp-card-body">
+              <div class="exp-meta">
+                <p class="exp-badge current">01/2026 - Present</p>
+              </div>
+              <h3 class="exp-role">Professional React Developer Intern</h3>
+              <h4 class="exp-company"><a href="https://www.digilians.gov.eg/" target="_blank">Digilians <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+              <div class="exp-blocks">
+                <div class="exp-block challenge">
+                  <span><i class="fa-solid fa-circle-exclamation"></i> Challenge</span>
+                  <p>Mastering full-stack development using the MERN ecosystem within an intensive 590-hour program,
+                    while building secure, scalable applications and collaborating effectively in a team environment.
+                  </p>
+                </div>
+                <div class="exp-block action">
+                  <span><i class="fa-solid fa-screwdriver-wrench"></i> Action</span>
+                  <p>
+                    Built full-stack applications using MERN stack (MongoDB, Express.js, React.js, Node.js) with
+                    RESTful APIs, authentication, and middleware implementation
+                    <br>
+                    Managed scalable state using Redux and Context API, following clean code principles with
+                    basic
+                    unit testing
+                    <br>
+                    Utilized Git workflows (branching, merging, code reviews) in team environments and learned
+                    Docker
+                    fundamentals for containerization
+                  </p>
+                </div>
+                <div class="exp-block result">
+                  <span><i class="fa-solid fa-circle-check"></i> Result</span>
+                  <p>Delivered multiple functional full-stack applications with secure APIs and efficient state
+                    management, demonstrating production-ready skills within the intensive program.</p>
+                </div>
+              </div>
+              <div class="svc-tags">
+                <span><i class="fa-regular fa-file-code"></i> HTML5 / CSS3</span>
+                <span><i class="fa-brands fa-react"></i> React.js</span>
+                <span><i class="fa-brands fa-git-alt"></i> Git Workflow</span>
+                <span><i class="fa-solid fa-laptop-code"></i> MERN Stack</span>
+                <span><i class="fa-brands fa-square-js"></i> JavaScript (ES6+)</span>
+                <span><i class="fa-solid fa-bug-slash"></i> Performance Optimization</span>
+                <span><i class="fa-solid fa-robot"></i> Prompt Engineering</span>
+                <span><i class="fa-solid fa-list-check"></i> Unit Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ SERVICES ═══════════════════════════════ -->
+    <section class="section services" id="services">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">What I Do</div>
+          <h2 class="section-heading">My <em>Services</em></h2>
+        </div>
+        <div class="services-grid">
+          <div class="svc-card reveal-up" style="--d:0s">
+            <div class="svc-num">01</div>
+            <div class="svc-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Front-End Development</h3>
+            <p>I build modern and responsive websites using HTML, CSS, JavaScript, and Bootstrap. My focus is on
+              creating clean, maintainable code and delivering smooth user experiences across all devices.</p>
+            <div class="svc-tags">
+              <span><i class="fa-brands fa-react"></i> React.js</span>
+              <span><i class="fa-solid fa-cubes"></i> Components</span>
+              <span><i class="fa-brands fa-js"></i> JS</span>
+            </div>
+          </div>
+          <div class="svc-card reveal-up" style="--d:.07s">
+            <div class="svc-num">02</div>
+            <div class="svc-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>UI/UX Implementation</h3>
+            <p>I convert design files such as Figma or Adobe XD into responsive and pixel-perfect web interfaces while
+              ensuring usability, performance, and accurate design implementation.</p>
+            <div class="svc-tags">
+              <span><i class="fa-brands fa-figma"></i> Figma</span>
+            </div>
+          </div>
+          <div class="svc-card reveal-up" style="--d:.14s">
+            <div class="svc-num">03</div>
+            <div class="svc-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Website Fixes & Improvements</h3>
+            <p>I fix layout issues, bugs, and design problems in existing websites to improve both functionality and
+              user experience.</p>
+            <div class="svc-tags">
+              <span><i class="fa-solid fa-mobile-screen-button"></i> Responsive</span>
+            </div>
+          </div>
+          <div class="svc-card reveal-up" style="--d:.21s">
+            <div class="svc-num">04</div>
+            <div class="svc-icon"><i class="fa-solid fa-plug-circle-check"></i></div>
+            <h3>API Integration</h3>
+            <p>I integrate front-end applications with REST APIs to fetch and display dynamic data in a clean and
+              interactive way.</p>
+            <div class="svc-tags">
+              <span><i class="fa-solid fa-plug-circle-bolt"></i> REST APIs</span>
+              <span> Async</span>
+            </div>
+          </div>
+          <div class="svc-card reveal-up" style="--d:.28s">
+            <div class="svc-num">05</div>
+            <div class="svc-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Performance Optimization</h3>
+            <p>I improve website performance by optimizing code and assets to achieve faster loading times and smoother
+              interactions for users.</p>
+            <div class="svc-tags">
+              <span><i class="fa-solid fa-bolt"></i> Speed</span>
+              <span><i class="fa-solid fa-chart-pie"></i> Lighthouse</span>
+            </div>
+          </div>
+          <div class="svc-card pricing-cta-card reveal-up" style="--d:.35s">
+            <div class="svc-icon"><i class="fa-regular fa-star"></i></div>
+            <h3>See Pricing Plans</h3>
+            <p>Transparent, scoped pricing from landing pages to full React experiences.</p>
+            <a href="pricing.html" class="btn-primary" style="margin-top:auto">View Pricing <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+
+    <section class="section projects" id="projects">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">Portfolio</div>
+          <h2 class="section-heading">Selected <em>Projects</em></h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="proj-card reveal-up">
+            <div class="proj-img-wrap">
+              <img src="images/news.png" alt="News Platform" class="proj-img" />
+            </div>
+            <div class="proj-content">
+              <div class="proj-header">
+                <h3 class="proj-title">News Platform</h3>
+                <span class="proj-badge">Digilians</span>
+              </div>
+              <div class="exp-block challenge">
+                <span><i class="fa-solid fa-circle-exclamation"></i> Challenge</span>
+                <p>Build a modern news platform that delivers real-time articles in a clean, responsive, and
+                  easy-to-navigate interface while ensuring fast performance and good user experience across devices.
+                </p>
+              </div>
+              <div class="exp-block action">
+                <span><i class="fa-solid fa-screwdriver-wrench"></i> Action</span>
+                <p>Developed a responsive news web application using HTML, CSS, JavaScript, and React, integrated
+                  external news APIs to fetch and display dynamic articles, and implemented features like category
+                  filtering, search functionality, and reusable UI components.</p>
+              </div>
+              <div class="exp-block result">
+                <span><i class="fa-solid fa-circle-check"></i> Result</span>
+                <p>Delivered a scalable and well-structured news platform with dynamic content rendering, improved user
+                  experience, and strengthened skills in API integration, state management, and responsive front-end
+                  development.</p>
+              </div>
+
+
+              <div class="proj-stack"><span>JavaScript</span><span>Bootstrap</span><span>HTML3</span><span>CSS3</span>
+              </div>
+              <div class="proj-actions">
+                <a href="https://github.com/rawda-ashraf/News-Platform" target="_blank" class="btn-ghost btn-sm"><i
+                    class="fa-brands fa-github"></i> Code</a>
+                <a href="https://rawda-ashraf.github.io/News-Platform/" target="_blank" class="btn-primary btn-sm"><i
+                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="proj-card reveal-up">
+            <div class="proj-img-wrap">
+              <img src="images/BabyCare.png" alt="News" class="proj-img" />
+            </div>
+            <div class="proj-content">
+              <div class="proj-header">
+                <h3 class="proj-title">BabyCare</h3>
+                <span class="proj-badge">Digilians</span>
+              </div>
+              <div class="exp-block challenge">
+                <span><i class="fa-solid fa-circle-exclamation"></i> Challenge</span>
+                <p>Build strong front-end foundations while turning training tasks into responsive and reusable web
+                  interfaces that feel like real product work.</p>
+              </div>
+              <div class="exp-block action">
+                <span><i class="fa-solid fa-screwdriver-wrench"></i> Action</span>
+                <p>Developed responsive pages with HTML, CSS, JavaScript, and React — connected APIs for dynamic
+                  content rendering.</p>
+              </div>
+              <div class="exp-block result">
+                <span><i class="fa-solid fa-circle-check"></i> Result</span>
+                <p>Strengthened core UI implementation skills and delivered better structured front-end solutions
+                  across multiple projects.</p>
+              </div>
+
+
+              <div class="proj-stack"><span>HTML3</span><span>CSS3</span><span>Bootstrap</span></div>
+              <div class="proj-actions">
+                <a href="https://github.com/rawda-ashraf/BabyCare-Landing-Page" target="_blank"
+                  class="btn-ghost btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="https://rawda-ashraf.github.io/BabyCare-Landing-Page/" target="_blank"
+                  class="btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ACHIEVEMENTS ═══════════════════════════════ -->
+    <section class="section achievements" id="achievements">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">Milestones</div>
+          <h2 class="section-heading">Key <em>Achievements</em></h2>
+        </div>
+        <div class="ach-grid">
+          <div class="ach-card reveal-up">
+            <!-- <div class="ach-icon"><i class="fa-solid fa-trophy"></i></div> -->
+            <div class="ach-content">
+              <h3>Coming Soon...........</h3>
+              <!-- <p>Achieved Very Good overall grade with GPA 3.18/4.00 and an A+ on the graduation project in breast
+                cancer detection.</p> -->
+              <!-- <span class="ach-year">2025</span> -->
+            </div>
+          </div>
+          <!-- <div class="ach-card reveal-up" style="--d:.07s">
+            <div class="ach-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="ach-content">
+              <h3>ITI Front-End Certification</h3>
+              <p>Successfully completed the ITI Angular front-end track, earning a professional certification from
+                Egypt's premier tech institute.</p>
+              <span class="ach-year">2024</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+    <section class="section testimonials" id="testimonials">
+      <div class="section-container">
+        <div class="section-header reveal-up">
+          <div class="section-label">Social Proof</div>
+          <h2 class="section-heading">What Others <em>Say</em></h2>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card reveal-up">
+            <div class="testi-quote">"</div>
+            <span class="testi-label">Reliable Developer</span>
+            <p>"Comming Soon.........."</p>
+            <div class="testi-footer">
+              <div class="testi-avatar">MO</div>
+              <div>
+                <h4>Menna Omar</h4>
+                <span>Mobile Software Engineer</span>
+              </div>
+              <a href="www.linkedin.com/in/rawda-ashraf-gabal" target="_blank" class="testi-linkedin"
+                aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="testi-card reveal-up" style="--d:.08s">
+            <div class="testi-quote">"</div>
+            <span class="testi-label">Clean Coder</span>
+            <p>"Her work is very, very, very beautiful."</p>
+            <span class="testi-label"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <div class="testi-footer">
+              <div class="testi-avatar">AN</div>
+              <div>
+                <h4>Ahmed Naser</h4>
+                <span>Client</span>
+              </div>
+              <a href="https://nafezly.com/u/rawda_ashraf/ratings" target="_blank" class="testi-linkedin"
+                aria-label="Nafezly"><i class="fa-solid fa-n"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+    <section class="section contact" id="contact">
+      <div class="section-container">
+        <div class="contact-layout">
+          <div class="contact-left reveal-left">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-heading">Let's <em>Connect</em></h2>
+            <p>Have a project in mind or want to discuss the latest in tech? Feel free to reach out.</p>
+            <div class="contact-info">
+              <div class="cinfo-item">
+                <span class="cinfo-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <strong>Cairo, Egypt</strong>
+              </div>
+              <a class="cinfo-item" href="mailto:rawda.ashraf.egy@gmail.com">
+                <span class="cinfo-icon"><i class="fa-solid fa-envelope"></i></span>
+                <strong>rawda.ashraf.egy@gmail.com</strong>
+              </a>
+              <a class="cinfo-item" href="tel:+201155707971">
+                <span class="cinfo-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                <strong>+20 115 570 7971</strong>
+              </a>
+              <a class="cinfo-item" href="https://wa.me/201155707971" target="_blank">
+                <span class="cinfo-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                <strong>WhatsApp</strong>
+              </a>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/rawda-ashraf" target="_blank" aria-label="GitHub"><i
+                  class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/rawda-ashraf-gabal/" target="_blank" aria-label="LinkedIn"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="contact-right reveal-right" style="--d:.08s">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label>Your Name</label>
+                  <input type="text" name="name" placeholder="Rawda Gabal" required />
+                </div>
+                <div class="form-field">
+                  <label>Email Address</label>
+                  <input type="email" name="email" placeholder="hello@example.com" required />
+                </div>
+              </div>
+              <div class="form-field">
+                <label>Your Message</label>
+                <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ═══════════════════════════════ Footer ═══════════════════════════════ -->
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <i class="fa-solid fa-code"></i>
+          <span>R<span class="dot">.</span>G</span>
+        </div>
+        <p class="footer-desc">
+          Frontend developer by title, creative problem-solver by nature. I love turning complex ideas into simple,
+          beautiful interfaces that people enjoy using.
+        </p>
+        <div class="footer-socials">
+          <a href="https://mostaql.com/u/rawda__ashraf" target="_blank" title="Mostaql">
+            <span>Mostaql</span>
+          </a>
+          <a href="https://nafezly.com/u/rawda_ashraf" target="_blank" title="Nafezly">
+            <span>Nafezly</span>
+          </a>
+          <a href="https://khamsat.com/user/rawda_ashraf_gabal" target="_blank" title="Khamsat">
+            <span>Khamsat</span>
+          </a>
+          <a href="https://kafiil.com/u/rawda_ashraf_gabal" target="_blank" title="Kafiil">
+            <span>Kafiil</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h4>
+          <i class="fa-solid fa-gem"></i>
+          WHAT MAKES ME DIFFERENT?
+        </h4>
+        <p>
+          I'm not just another developer. I care about your success as much as you do.
+          Every line of code I write is focused on solving real problems, not just looking pretty.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rawda Ashraf. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- Back to top -->
+  <a class="back-to-top" href="#home" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-angle-up"></i>
+  </a>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-icon"><i class="fa-solid fa-paper-plane"></i></div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for reaching out. I'll get back to you soon.</p>
+      <button class="btn-primary" id="modalOk">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

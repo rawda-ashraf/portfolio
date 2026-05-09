@@ -1703,6 +1703,7 @@ body.dark-theme .proj-stack span {
   position: absolute;
   top: 1rem;
   left: 1.5rem;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -2055,6 +2056,7 @@ body.dark-theme .footer-bottom {
   position: fixed;
   inset: 0;
   background: rgba(10, 8, 5, 0.6);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 2000;
   display: flex;
@@ -2878,6 +2880,7 @@ body.dark-theme .footer-socials a {
   font-size: 0.85rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 

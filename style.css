@@ -3115,3 +3115,46 @@ body.dark-theme .footer-socials a {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
+/* RTL language support */
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .header-inner,
+html[dir="rtl"] .hero-grid,
+html[dir="rtl"] .about-layout,
+html[dir="rtl"] .contact-layout,
+html[dir="rtl"] .footer-inner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-list {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-ctas,
+html[dir="rtl"] .contact-socials,
+html[dir="rtl"] .svc-tags,
+html[dir="rtl"] .proj-actions {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .section-label::before {
+  content: " ——";
+}
+
+html[dir="rtl"] .exp-card,
+html[dir="rtl"] .form-row-2 {
+  direction: rtl;
+}
+
+@media (max-width: 992px) {
+  html[dir="rtl"] .nav-list {
+    flex-direction: column;
+  }
+}
